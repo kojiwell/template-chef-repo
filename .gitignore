@@ -4,3 +4,4 @@
 .backup
 .ssh/config
 .ssh/id_*
+default*
