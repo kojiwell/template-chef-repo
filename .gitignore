@@ -1,0 +1,5 @@
+/cookbooks/
+.vagrant
+.ssh
+.cache
+.backup
