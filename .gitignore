@@ -2,3 +2,5 @@
 .vagrant
 .cache
 .backup
+.ssh/config
+.ssh/id_*
