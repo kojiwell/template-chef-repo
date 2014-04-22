@@ -1,0 +1,3 @@
+Template of Chef Repository
+===========================
+
