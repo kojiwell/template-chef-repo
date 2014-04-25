@@ -5,3 +5,4 @@
 .ssh/config
 .ssh/id_*
 default*
+data_bag_key
