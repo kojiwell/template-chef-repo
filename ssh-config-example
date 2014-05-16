@@ -1,10 +1,10 @@
-Host default
-  HostName 127.0.0.1
-  User vagrant
-  Port 2201
+Host host1
+  HostName 192.168.33.4
+  User username
+  Port 22
   UserKnownHostsFile /dev/null
   StrictHostKeyChecking no
   PasswordAuthentication no
-  IdentityFile /home/username/.vagrant.d/insecure_private_key
+  IdentityFile /home/username/.ssh/id_dsa
   IdentitiesOnly yes
   LogLevel FATAL
