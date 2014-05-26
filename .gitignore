@@ -1,8 +1,8 @@
+Berksfile.lock
 /cookbooks/
 .vagrant
 .cache
 .backup
-.ssh/config
-.ssh/id_*
+ssh-config
 default*
 data_bag_key
