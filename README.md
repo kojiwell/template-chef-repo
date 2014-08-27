@@ -3,6 +3,22 @@ Template of Chef Repository
 
 This is a template of Chef REpository.
 
+Initial Setup
+-------------
+TBD
+
+Use Chef Solo
+---------
+TBD
+
+Use Knife Solo
+---------
+TBD
+
+Use Chef Server
+---------------
+TBD
+
 how to setup encrypted_data_bag_secret
 --------------------------------------
 
