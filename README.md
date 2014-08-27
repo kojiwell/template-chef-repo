@@ -30,7 +30,9 @@ openssl rand -base64 512 | tr -d '\r\n' > data_bag_key
 
 #### Step 2. Uncomment `encrypted_data_bag_secret` on `.chef/knife.rb`.
 
-#### Step 3. Make sure `EDITOR` is set on your environment. The follows is an example with vi.
+#### Step 3. Make sure `EDITOR` is set on your environment. 
+
+The follows is an example with vi.
 
 ```
 export EDITOR=vi
