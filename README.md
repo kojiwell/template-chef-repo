@@ -5,7 +5,14 @@ This is a template of Chef REpository.
 
 Initial Setup
 -------------
-TBD
+
+Clone the template with using git, and setup bundler.
+
+```
+git clone https://github.com/kjtanaka/template-chef-repo.git chef-repo
+cd chef-repo
+bundle install
+```
 
 Use Chef Solo
 ---------
