@@ -5,5 +5,5 @@ Gemfile.lock
 .cache
 .backup
 ssh-config
-default*
+.ssh
 data_bag_key
