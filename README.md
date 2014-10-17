@@ -56,3 +56,10 @@ Here's an example. The data bag is mybag, item is secrets.
 ```
 knife solo data bag create mybag secrets
 ```
+
+### Step 5. Call your data back item on your recipe
+
+```
+secrets = Chef::EncryptedDataBagItem.load("test", "passwords")
+mysql_password = secrets['mysql_password']
+```
