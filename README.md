@@ -1,7 +1,7 @@
 Template of Chef Repository
 ===========================
 
-This is a template of Chef REpository.
+This is a template of Chef Repository.
 
 Initial Setup
 -------------
@@ -14,15 +14,22 @@ cd chef-repo
 bundle install
 ```
 
-Use Chef Solo
+Chef Solo
 ---------
-TBD
 
-Use Knife Solo
+```
+chef-solo -c .chef/solo -j node/localhost.json
+```
+
+Knife Solo
 ---------
-TBD
 
-Use Chef Server
+```
+knife solo prepare host1.example.org
+knife solo cook host1.example.org
+```
+
+Chef Server
 ---------------
 TBD
 
@@ -35,6 +42,7 @@ Generate `data_bag_key` file with this.
 
 ```
 openssl rand -base64 512 | tr -d '\r\n' > data_bag_key
+sed -i -e 's/^#encrypted.*/encrypted_data_bag_secret "data_bag_key"/' .chef/knife.rb
 ```
 
 #### Step 2. Enable encrypted data bag
@@ -57,7 +65,7 @@ Here's an example. The data bag is mybag, item is secrets.
 knife solo data bag create mybag secrets
 ```
 
-### Step 5. Load your data bag item into your recipe
+#### Step 5. Load your data bag item into your recipe
 
 ```
 secrets = Chef::EncryptedDataBagItem.load("mybag", "secrets")
