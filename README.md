@@ -1,7 +1,7 @@
 Template of Chef Repository
 ===========================
 
-This is a template of Chef repository which is designed to work for eather of
+This is a template of Chef repository which is designed to work for
 Chef Solo, Knife Solo and Chef Server.
 
 Initial Setup
