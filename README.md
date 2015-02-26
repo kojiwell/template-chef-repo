@@ -11,6 +11,8 @@ Clone the template with using git, and setup bundler.
 ```
 git clone https://github.com/kjtanaka/template-chef-repo.git chef-repo
 cd chef-repo
+rm -rf .git
+git init
 bundle install
 ```
 
@@ -42,12 +44,17 @@ Generate `data_bag_key` file with this.
 
 ```
 openssl rand -base64 512 | tr -d '\r\n' > data_bag_key
-sed -i -e 's/^#encrypted.*/encrypted_data_bag_secret "data_bag_key"/' .chef/knife.rb
+chmod 400 data_bag_key
 ```
+The `data_bag_key` is so important that you should keep a copy somewhere else securely.
 
 #### Step 2. Enable encrypted data bag
 
 Uncomment `encrypted_data_bag_secret` on `.chef/knife.rb`.
+
+```
+sed -i -e 's/^#encrypted.*/encrypted_data_bag_secret "data_bag_key"/' .chef/knife.rb
+```
 
 #### Step 3. Setup $EDITOR envrionment.
 
